@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: dimgray;
+    background-color: black;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -33,4 +33,26 @@
     padding: 5px;
     height: 22px !important;
     background-color: #cd9042;
+}
+
+.header-optionLineone {
+    font-size: 8px;
+}
+
+.header-optionLinetwo {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
 }
