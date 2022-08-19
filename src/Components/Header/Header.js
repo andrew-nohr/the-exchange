@@ -1,11 +1,12 @@
-import React from 'react'
-import './header.css'
+import React from 'react';
+import './header.css';
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 function Header() {
   return (
     <div className='header'>
-      <img className='header-logo' src={require('../../images/logo-3.png')}  alt="The letters E, X, C, H, and has a home with a"/>
+      <img className='header-logo' src={require('../../images/logo-4.png')}  alt="The letters E, X, C, H, and has a home with a"/>
 
       <div className="header-search">
         <input className='header-searchInput' type="text"></input>
@@ -26,7 +27,10 @@ function Header() {
             <span className='header-optionlineone'> Your </span>
             <span  className='header-optionlinetwo'> EXCH+ </span>
         </div>
-
+        <div className='header-optionBasket'>
+            <ShoppingBasketIcon/>
+            <span className='header-optionlinetwo header-basketCount'>0</span>
+        </div>
       </div>
     </div>
     

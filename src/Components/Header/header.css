@@ -58,3 +58,15 @@
     margin-right: 10px;
     color: white;
 }
+
+.header-optionBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
