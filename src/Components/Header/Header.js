@@ -1,12 +1,11 @@
 import React from 'react'
 import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
-import logo from '../../images/logo.png';
 
 function Header() {
   return (
     <div className='header'>
-      <image className='header-logo' src={logo}  alt="The letters E, X, C, H, and has a home with a"/>
+      <img className='header-logo' src={require('../../images/logo-3.png')}  alt="The letters E, X, C, H, and has a home with a"/>
 
       <div className="header-search">
         <input className='header-searchInput' type="text"></input>
