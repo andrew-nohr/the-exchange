@@ -2,12 +2,17 @@ import React from 'react';
 import './header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   return (
     <div className='header'>
+      <Link to='/'>
+    
       <img className='header-logo' src={require('../../images/logo-4.png')}  alt="The letters E, X, C, H, and has a home with a"/>
-
+      
+      </Link>
       <div className="header-search">
         <input className='header-searchInput' type="text"></input>
         <SearchIcon className='header-searchIcon' />
