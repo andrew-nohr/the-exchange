@@ -32,10 +32,13 @@ function Header() {
             <span className='header-optionlineone'> Your </span>
             <span  className='header-optionlinetwo'> EXCH+ </span>
         </div>
+
+        <Link to='/checkout'>
         <div className='header-optionBasket'>
             <ShoppingBasketIcon/>
             <span className='header-optionlinetwo header-basketCount'>0</span>
         </div>
+        </Link>
       </div>
     </div>
     
