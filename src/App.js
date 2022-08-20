@@ -6,7 +6,7 @@ import Checkout from './Components/Checkout/Checkout';
 
 function App() {
   return (
-    // BEM
+    
     <Router>
       <Header/>
       <Routes>
