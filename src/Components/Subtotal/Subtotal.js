@@ -14,10 +14,10 @@ function Subtotal() {
   return (
     <div className='subtotal'>
       <CurrencyFormat
-        renderText={(value) =>(
+        renderText={(value) => (
             <>
                 <p>
-                    Subtotal ({basket?.length} items): <strong> {value} </strong>
+                    Subtotal ({basket.length} items): <strong> {value} </strong>
                 </p>
                 <samll className='subtotal-gift'>
                     <input type="checkbox" /> This order contains a gift!
@@ -25,8 +25,8 @@ function Subtotal() {
             </>
         )}
         decimalScale={2}
-        value={0}
-        displayType={getBasketTotal(basket)}
+        value={getBasketTotal(basket)}
+        displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
         />

@@ -9,19 +9,19 @@ export const initialState = {
 //everytime it loops through, the item price will add to the total amount and the initial amount will be zero.
 
 export const getBasketTotal = (basket) => 
-basket?.reduce((amount, item) => item.price + amount, 0);
+basket?.reduce ((amount, item) => item.price + amount, 0);
 
 
-const Reducer = (state, action) => { 
+function Reducer(state, action) {
     console.log(action);
     switch (action.type) {
         case 'ADD-TO-BASKET':
-            default:
+        default:
             return {
                 ...state,
                 basket: [...state.basket, action.item]
             };
     }
-};
+}
 
 export default Reducer;
