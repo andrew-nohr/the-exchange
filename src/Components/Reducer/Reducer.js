@@ -16,11 +16,33 @@ function Reducer(state, action) {
     console.log(action);
     switch (action.type) {
         case 'ADD-TO-BASKET':
-        default:
+       
             return {
                 ...state,
                 basket: [...state.basket, action.item]
             };
+        
+        case 'REMOVE-FROM-BASKET':
+            const index = state.basket.findIndex(
+                (basketItem) => basketItem.id === action.id
+            );
+            let newBasket = [...state.basket];
+            if (index >= 0){
+                    newBasket.splice(index, 1)
+            } else {
+                console.warn(
+                    'Cannot delete product as it is not in the basket'
+                )
+            }
+            return {
+                ...state,
+                basket: newBasket
+            }
+
+
+            default:
+                return state;
+        
     }
 }
 
