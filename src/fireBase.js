@@ -1,10 +1,12 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ import firebase from 'firebase';
+ 
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBaiyYdNU1SGT4zoeYwK0e9ISB-Z3iqoaQ",
-    authDomain: "the-exchange-f6a6b.firebaseapp.com",
-    projectId: "the-exchange-f6a6b",
-    storageBucket: "the-exchange-f6a6b.appspot.com",
-    messagingSenderId: "947108411170",
-    appId: "1:947108411170:web:4e1529b26e3abcc834177b",
-    measurementId: "G-NLS334H3G2"
-  };
+  apiKey: "AIzaSyBJ7npkuqhZD9fgHeJqaTeXDjyiEmdnI20",
+  authDomain: "thee-exchange.firebaseapp.com",
+  projectId: "thee-exchange",
+  storageBucket: "thee-exchange.appspot.com",
+  messagingSenderId: "55016199369",
+  appId: "1:55016199369:web:fa0ba49dc779f613e62918",
+  measurementId: "G-TW9508R2H7"
+};
