@@ -1,4 +1,3 @@
-
 export const initialState = {
     basket: [],
     user: null
@@ -16,7 +15,6 @@ function Reducer(state, action) {
     console.log(action);
     switch (action.type) {
         case 'ADD-TO-BASKET':
-       
             return {
                 ...state,
                 basket: [...state.basket, action.item]
@@ -38,8 +36,12 @@ function Reducer(state, action) {
                 ...state,
                 basket: newBasket
             }
-
-
+        
+        case 'SET-USER':
+            return {
+                ...state,
+                user: action.user
+            };
             default:
                 return state;
         
