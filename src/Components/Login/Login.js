@@ -13,7 +13,7 @@ function Login() {
 
   const signIn = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth,email, password)
+    signInWithEmailAndPassword(auth, email, password)
     .then(auth => {
         navigate('/') 
     })
@@ -32,50 +32,49 @@ const register = e => {
     })
     .catch(error => alert(error.message))
 }
-  return (
-    <div className="login">
-      <Link to="/">
-        <img
-          className="login-logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
-          alt=""
-        />
-      </Link>
-      <div className="login-container">
-        <h1>Sign-in</h1>
-        <form>
-          <h5>E-mail</h5>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
 
-          <h5>Password</h5>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button
-            type="submit"
-            onClick={signIn}
-            className="login-signInButton"
-          >
-            Sign In
-          </button>
+  return (
+    <div className='login'>
+
+        <Link to='/'>
+            <img 
+            className="login-Logo"
+             src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
+            alt='word amazon with an arrow as a smiley face pointing from A to Z in the word amazong.'
+            />
+        </Link>
+
+     <div className='login-container'>
+        <h1> Sign-In </h1>
+
+        <form>
+            <h5> E-mail </h5>
+            <input 
+            type='text' 
+            value={email}
+            onChange={e => setEmail(e.target.value)}/>
+
+            <h5> Password </h5>
+            <input type='password' 
+            value={password} 
+            onChange={e => setPassword(e.target.value)}/>
+
+            <button 
+            type='submit'
+            onClick={signIn} 
+            className='login-signIn'> Sign-In </button>
+
         </form>
 
-        <p>
-          By creating an account, you agree to Amazon's Clone Conditions of Use
-          and Privacy Notice.
-        </p>
-        <button onClick={register} className="login-registerButton">
-          Create Your Amazon Account
-        </button>
-      </div>
+                <p> This is a fake Amazon website. </p>
+
+            <button 
+            onClick={register}
+            className='login-registerButton'> Create Amazon Account </button>
+
+        </div>
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login
