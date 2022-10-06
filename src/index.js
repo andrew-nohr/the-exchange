@@ -5,7 +5,6 @@ import App from './App';
 import * as serviceWorker from "./serviceWorker";
 import { StateProvider } from './Components/StateProvider/StateProvider';
 import Reducer, { initialState } from './Components/Reducer/Reducer';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

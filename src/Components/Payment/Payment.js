@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './payment.css';
 import { useStateValue } from '../StateProvider/StateProvider';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../Reducer/Reducer';
@@ -20,7 +20,18 @@ export default function Payment() {
             //blocks user from hitting buy button multiple times
             setProcessing(true);
 
-            //const payload = await stripe
+        const payload = await stripe.confirmationCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(cardElement)
+            }
+        }).then(({ paymentIntent }) => {
+            // paymentIntent = payment confirmation
+            setSucceeded(true);
+            setError(null);
+            setProcessing(false);
+
+            Navigate('/orders')
+        })
     };
 
     const handleChange = e => {
@@ -41,6 +52,7 @@ export default function Payment() {
         const getClientSecret = async () => {
             const response = await axios({
                 method: "post",
+                //stripe expects the total in a currencies subunits
                 url: `/payment/create?total=${getBasketTotal(basket) * 100}`,
               });
               // console.log("response", response.data.clientSecret);
